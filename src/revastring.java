@@ -1,6 +1,6 @@
 public class revastring {
     public static void main(String[] args) {
-    String str = "utkarsh";
+    String str = "utkarshgupta";
      rev(str);
     }
     public static void rev(String s){
