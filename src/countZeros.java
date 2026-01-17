@@ -3,7 +3,7 @@ public class countZeros {
         System.out.println(count(30210004));
     }
      static int count(int n ) {
-            return helper(0, 0);
+            return helper(n, 0);
     }
     private static int helper(int n,int c){
             if(n==0){
