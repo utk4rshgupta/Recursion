@@ -1,6 +1,6 @@
 public class revanum {
     public static void main(String[] args) {
-        rev1(123);
+        rev1(12365);
         System.out.println(sum);
     }
     static int sum =0;
