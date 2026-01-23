@@ -2,8 +2,10 @@ package Strings;
 
 public class skipAWord {
     public static void main(String[] args) {
-        skip("", "abcgfAppleajfb");
-        System.out.println(skip2("abcgfAppleajfb"));
+        skip("", "abcgfappleajfb");
+        System.out.println(skip2("abcgfappleajfb"));
+        System.out.println(skipappnotapple("appappleabcgfappappleajfb"));
+
     }
 
     static void skip(String ans, String que) {
@@ -12,7 +14,7 @@ public class skipAWord {
             return;
         }
 
-        if (que.startsWith("Apple")) {
+        if (que.startsWith("apple")) {
             skip(ans, que.substring(5));
         } else {
             skip(ans + que.charAt(0), que.substring(1));
@@ -24,10 +26,23 @@ public class skipAWord {
                 return "";
             }
 
-            if (que.startsWith("Apple")) {
+            if (que.startsWith("apple")) {
                 return skip2(que.substring(5));
             } else {
                 return que.charAt(0) + skip2(que.substring(1));
+            }
+        }
+
+        //skip app not apple
+        static String skipappnotapple(String que){
+            if (que.isEmpty()) {
+                return "";
+            }
+
+            if (que.startsWith("app") && !que.startsWith("apple")) {
+                return skipappnotapple(que.substring(3));
+            } else {
+                return que.charAt(0) + skipappnotapple(que.substring(1));
             }
         }
     }
