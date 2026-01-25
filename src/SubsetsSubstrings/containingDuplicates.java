@@ -1,6 +1,4 @@
 package SubsetsSubstrings;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +11,6 @@ public class containingDuplicates {
                 System.out.println(list);
             }
         }
-
     static List<List<Integer>> subsetDuplicate(int[] arr){
         Arrays.sort(arr);
         List<List<Integer>> outer =new ArrayList<>();
