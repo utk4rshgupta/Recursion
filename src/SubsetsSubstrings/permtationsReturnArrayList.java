@@ -5,10 +5,11 @@ import java.util.ArrayList;
 public class permtationsReturnArrayList {
     public static void main(String[] args){
         ArrayList<String> ans = new ArrayList<>();
-        ans =  permutationsArray("","adbc");
+        ans =  permutationsArray("","adb");
         System.out.println(ans);
+        int count = permutationsCount("","adb");
+        System.out.println(count);
     }
-    static int count =0;
     static ArrayList<String> permutationsArray(String p,String up){
         if(up.isEmpty()){
             ArrayList<String> list = new ArrayList<>();
@@ -24,4 +25,19 @@ public class permtationsReturnArrayList {
         }
         return ans;
     }
+
+    static int permutationsCount(String p,String up){
+        if(up.isEmpty()){
+            return 1;
+        }
+        char ch = up.charAt(0);
+        int count=0;
+        for (int i = 0; i <= p.length(); i++){
+            String s = p.substring(i,p.length());
+            String f = p.substring(0,i);
+            count= count+ permutationsCount(f+ch+s,up.substring(1));
+        }
+        return count;
+    }
+
 }
