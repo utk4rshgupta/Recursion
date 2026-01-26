@@ -1,11 +1,9 @@
 package SubsetsSubstrings;
 
 public class permutations {
-    public static void main(String[] args){
-    permutations("","abc");
-        System.out.println(count);
+    public static void main(String[] args) {
+        permutations("", "abc");
     }
-    static int count =0;
     static void permutations(String p,String up){
         if(up.isEmpty()){
             System.out.println(p);
@@ -15,10 +13,7 @@ public class permutations {
         for (int i = 0; i <= p.length(); i++){
             String s = p.substring(i,p.length());
             String f = p.substring(0,i);
-
             permutations(f+ch+s,up.substring(1));
-            count++;
-
         }
     }
 }
