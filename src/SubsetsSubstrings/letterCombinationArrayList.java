@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class letterCombinationArrayList {
     static void main(String[] args) {
         System.out.println(pad1("","12"));
+        System.out.println(padCount("","12"));
     }
     static ArrayList<String> pad1(String p,String up){
         if(up.isEmpty()){
@@ -18,4 +19,18 @@ public class letterCombinationArrayList {
         }
         return list;
     }
+
+    static int padCount(String p,String up) {
+        if (up.isEmpty()) {
+            return 1;
+        }
+        int count = 0;
+        int digit = up.charAt(0) - '0';
+        for (int i = (digit - 1) * 3; i < digit * 3; i++) {
+            char ch = (char) ('a' + i);
+            count = count + padCount(p + ch, up.substring(1));
+        }
+        return count;
+    }
+
 }
