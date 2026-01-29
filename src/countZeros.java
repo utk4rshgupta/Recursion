@@ -1,6 +1,6 @@
 public class countZeros {
     public static void main(String[] args) {
-        System.out.println(zero(23002300));
+        System.out.println(count(23002300));
     }
     static int count(int n ) {
             return helper(n, 0);
@@ -10,12 +10,11 @@ public class countZeros {
                 return c;
             }
             int rem =n%10;
-            if(rem ==0){
+            if(rem == 0){
                 return helper(n/10,c+1);
             }
             return helper(n/10,c);
     }
-
     static int zero(int n){
         if(n==0){
             return 1;
