@@ -2,7 +2,7 @@ package SubsetsSubstrings;
 import java.util.*;
 public class containingDuplicates {
         public static void main(String[] args) {
-            int[] arr = {1,2,2};
+            int[] arr = {1,2,2,3};
             List<List<Integer>> ans = subsetDuplicate(arr);
             for(List<Integer> list: ans){
                 System.out.println(list);
@@ -22,7 +22,7 @@ public class containingDuplicates {
             }
             end=outer.size()-1;
             int n = outer.size();
-            for(int j =0;j<n;j++){
+            for(int j =start;j<=end;j++){
                 List<Integer> internal = new ArrayList<>(outer.get(j));
                 internal.add(arr[i]);
                 outer.add(internal);
