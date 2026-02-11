@@ -3,7 +3,7 @@ package SubsetsSubstrings;
 public class permutations {
     public static void main(String[] args) {
         permutations("", "abc");
-        System.out.println(permutationsCount("","abc"));
+        //System.out.println(permutationsCount("","abc"));
     }
     static void permutations(String p,String up){
         if(up.isEmpty()){
