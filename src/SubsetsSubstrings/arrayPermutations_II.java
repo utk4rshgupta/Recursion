@@ -6,7 +6,7 @@ import java.util.List;
 
 public class arrayPermutations_II {
     public static void main(String[] args ){
-        int[] nums={1,2,1};
+        int[] nums={1,2,2};
         // Create a list to store the final results
         List<List<Integer>> res = new ArrayList<>();
         // Sort the input array to group duplicates together
